@@ -73,12 +73,12 @@ export default function GalleryGrid({ items, categories }) {
           if (e.key === "ArrowRight") step(1);
           if (e.key === "ArrowLeft") step(-1);
         }}
-        className="m-auto max-h-[92vh] w-[min(94vw,64rem)] overflow-auto rounded-xl bg-ember-charcoal p-0 text-ivory backdrop:bg-black/80"
+        className="m-auto max-h-[94vh] w-[min(94vw,60rem)] overflow-hidden rounded-xl bg-ember-charcoal p-0 text-ivory backdrop:bg-black/80"
       >
         {current && (
-          <div>
-            <div className="relative aspect-[4/3] bg-ember-black">
-              <Image src={current.src} alt={current.alt} fill sizes="(min-width: 1024px) 1024px, 94vw" className="object-cover" />
+          <div className="flex flex-col">
+            <div className="relative h-[62vh] w-full bg-ember-black">
+              <Image src={current.src} alt={current.alt} fill sizes="(min-width: 1024px) 960px, 94vw" className="object-cover" />
             </div>
             <div className="flex items-center justify-between gap-4 p-5">
               <div className="min-w-0">
