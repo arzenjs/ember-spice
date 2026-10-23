@@ -2,6 +2,7 @@ import { EB_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import SiteChrome from "@/components/layout/SiteChrome";
 import { restaurant } from "@/config/restaurant";
 
 const garamond = EB_Garamond({ subsets: ["latin"], variable: "--font-garamond", display: "swap" });
@@ -45,9 +46,9 @@ export default function RootLayout({ children }) {
         >
           Skip to content
         </a>
-        <SiteHeader />
-        <main id="main" className="pt-20">{children}</main>
-        <SiteFooter />
+        <SiteChrome header={<SiteHeader />} footer={<SiteFooter />}>
+          {children}
+        </SiteChrome>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </body>
     </html>

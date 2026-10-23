@@ -25,6 +25,9 @@ export default function SiteFooter() {
                   <Link href={i.href} className={link}>{i.label}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/reserve" className={link}>Reserve a Table</Link>
+              </li>
             </ul>
           </nav>
 
@@ -60,9 +63,14 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <p className="mt-16 border-t border-ivory/10 pt-8 text-sm text-sand">
-          © {new Date().getFullYear()} {restaurant.copyrightName}. Demo restaurant; all details are fictional.
-        </p>
+        <div className="mt-16 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-sm text-sand sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} {restaurant.copyrightName}. Demo restaurant; all details are fictional.</p>
+          <nav aria-label="Legal" className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link href="/privacy" className="transition-colors hover:text-ivory">Privacy Policy</Link>
+            <Link href="/terms" className="transition-colors hover:text-ivory">Terms</Link>
+            <Link href="/staff/login" className="transition-colors hover:text-ivory">Staff Portal</Link>
+          </nav>
+        </div>
       </Container>
     </footer>
   );

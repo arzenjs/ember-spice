@@ -8,8 +8,11 @@ const variants = {
   secondary: "border border-sand/40 text-ivory hover:border-ivory hover:bg-ivory/10",
 };
 
+// Exported so <button> elements (form submits) can look exactly like <Button> links.
+export const buttonStyles = (variant = "primary", className) => cn(base, variants[variant], className);
+
 export default function Button({ href, variant = "primary", className, children, ...props }) {
-  const cls = cn(base, variants[variant], className);
+  const cls = buttonStyles(variant, className);
   if (href.startsWith("/")) {
     return (
       <Link href={href} className={cls} {...props}>

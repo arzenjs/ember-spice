@@ -64,7 +64,10 @@ export default function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button href={restaurant.directionsUrl} className="hidden sm:inline-flex">
+            <Button href="/reserve" className="hidden sm:inline-flex">
+              Reserve a Table
+            </Button>
+            <Button href={restaurant.directionsUrl} variant="secondary" className="hidden xl:inline-flex">
               Get Directions
             </Button>
             <button
@@ -111,7 +114,10 @@ export default function SiteHeader() {
               </ul>
             </nav>
             <div className="flex flex-col gap-3 py-6">
-              <Button href={`tel:${restaurant.phone.tel}`}>
+              <Button href="/reserve" onClick={() => setOpen(false)}>
+                Reserve a Table
+              </Button>
+              <Button href={`tel:${restaurant.phone.tel}`} variant="secondary">
                 <Phone size={16} aria-hidden="true" /> Call Now
               </Button>
               <Button href={restaurant.directionsUrl} variant="secondary">

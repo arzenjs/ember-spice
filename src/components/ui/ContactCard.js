@@ -2,7 +2,7 @@ import Button from "./Button";
 
 export default function ContactCard({ icon: Icon, label, value, description, actionLabel, href, variant = "secondary" }) {
   return (
-    <div className="flex flex-col justify-between rounded-xl bg-ember-charcoal p-7">
+    <div className="flex h-full flex-col justify-between rounded-xl bg-ember-charcoal p-7">
       <div>
         <span className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg bg-ember-black text-copper-soft" aria-hidden="true">
           <Icon size={22} />

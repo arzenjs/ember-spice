@@ -16,7 +16,8 @@ export default function VisitStrip() {
             <span>{restaurant.address.street}<br />{restaurant.address.district}</span>
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href={restaurant.directionsUrl}>Get Directions</Button>
+            <Button href="/reserve">Reserve a Table</Button>
+            <Button href={restaurant.directionsUrl} variant="secondary">Get Directions</Button>
             <Button href="/location" variant="secondary">Visit Details</Button>
           </div>
         </div>

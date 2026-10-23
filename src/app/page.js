@@ -31,7 +31,8 @@ export default function HomePage() {
             <p className="mt-3 font-display text-2xl italic text-sand">{restaurant.tagline}</p>
             <p className="mt-5 max-w-xl text-base leading-7 text-ivory/90">{restaurant.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/menu">View Menu</Button>
+              <Button href="/reserve">Reserve a Table</Button>
+              <Button href="/menu" variant="secondary">View Menu</Button>
               <Button href="/location" variant="secondary">Visit Us</Button>
             </div>
           </Reveal>
