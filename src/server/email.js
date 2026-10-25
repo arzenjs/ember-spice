@@ -1,11 +1,5 @@
 import { Resend } from "resend";
 import { restaurant } from "../config/restaurant.js";
-
-// Returns { ok: true } or { ok: false, error }. Never throws, so callers can keep the saved data
-// and offer a retry when email delivery fails.
-//
-// EMAIL_MODE=log     prints the email to the server console (local development, nothing is sent).
-// EMAIL_MODE=resend  sends through Resend. Required in production.
 export async function sendEmail({ to, subject, html, text }) {
   const mode = process.env.EMAIL_MODE || "log";
 

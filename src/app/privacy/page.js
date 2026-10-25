@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <h2>Who processes it</h2>
       <p>Reservation data is stored in our database, and confirmation emails are delivered through an email service provider.</p>
       <h2>Contact</h2>
-      <p>For questions or requests about your data, email <a href={`mailto:${restaurant.email}`}>{restaurant.email}</a>.</p>
+      <p>For questions or requests about your data, email <a href={`mailto:${restaurant.contactEmail}`}>{restaurant.contactEmail}</a>.</p>
     </LegalPage>
   );
 }
