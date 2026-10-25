@@ -48,7 +48,7 @@ export default function SiteFooter() {
             <address className="space-y-3 text-base not-italic text-sand">
               <p>{restaurant.address.street}<br />{restaurant.address.district}</p>
               <p><a className={link} href={`tel:${restaurant.phone.tel}`}>{restaurant.phone.display}</a></p>
-              <p><a className={link} href={`mailto:${restaurant.email}`}>{restaurant.email}</a></p>
+              <p><a className={link} href={`mailto:${restaurant.contactEmail}`}>{restaurant.contactEmail}</a></p>
               <p><a className={link} href={restaurant.directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions</a></p>
             </address>
             {restaurant.social.length > 0 && (

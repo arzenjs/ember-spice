@@ -9,8 +9,9 @@ export const restaurant = {
   footerDescription:
     "Live-fire cooking, toasted spices, and slow hospitality in the Culinary Arts District.",
   phone: { display: "+1 (555) 382-3774", tel: "+15553823774" },
-  whatsapp: "15553823774", // international format, digits only
-  email: "hello@emberandspice.com",
+  whatsapp: "15553823774",
+  email: process.env.RESEND_FROM_EMAIL || "confirmation@emberandspice.com",
+  contactEmail: process.env.CONTACT_INBOX_EMAIL || "contact@emberandspice.com",
   address,
   addressLine: `${address.street}, ${address.district}`,
   directionsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
