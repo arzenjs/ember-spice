@@ -38,7 +38,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${garamond.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${garamond.variable} ${manrope.variable}`} data-scroll-behavior="smooth">
       <body>
         <a
           href="#main"

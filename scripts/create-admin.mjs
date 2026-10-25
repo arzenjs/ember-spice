@@ -1,8 +1,3 @@
-// One-time provisioning of the owner/admin account. Run on a trusted machine:
-//   npm run create-admin
-// Reads MONGODB_URI from .env.local. Prompts for email, name and password (hidden input).
-// For automation you may set ADMIN_EMAIL, ADMIN_NAME and ADMIN_PASSWORD instead of being prompted.
-// Refuses to run if an admin already exists, and is never exposed over HTTP.
 import readline from "node:readline";
 import bcrypt from "bcryptjs";
 import mongoose from "mongoose";
